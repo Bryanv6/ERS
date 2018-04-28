@@ -1,0 +1,7 @@
+package controller;
+
+/**
+ * Created by bryanvillegas on 4/25/18.
+ */
+public class CheckUsernameController {
+}
