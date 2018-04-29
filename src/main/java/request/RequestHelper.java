@@ -30,7 +30,8 @@ public class RequestHelper {
             else
                 lc.getPage(req,res);
             break;
-            //default: hc.goHome(req, res); break;
+            //case "/MasterServlet/getRequests":
+
         }
     }
 }

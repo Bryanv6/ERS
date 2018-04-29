@@ -21,7 +21,7 @@ public class HomeController {
 
     public void goHome(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, JAXBException{
         HttpSession session = req.getSession();
-        PrintWriter printWriter = res.getWriter();
+        //PrintWriter printWriter = res.getWriter();
 
         Employee emp = (Employee)session.getAttribute("email");
         /*try {
@@ -42,12 +42,14 @@ public class HomeController {
                 res.sendRedirect("/MasterServlet/login");
 
             } else {
-                //String json = new Gson().toJson(emp);
-                res.setContentType("text/plain");
+                String json = new Gson().toJson(emp);
+                res.setContentType("application/json");
                 String hello = "Hello World";
                 //res.setCharacterEncoding("UTF-8");
-                res.getWriter().write(hello);
-                req.getRequestDispatcher("/html/empHome.html").forward(req,res);
+                res.sendRedirect("/html/empHome.html");
+                res.getWriter().append(json);
+                //req.getRequestDispatcher("/html/empHome.html").forward(req,res);
+
             }
 
         }

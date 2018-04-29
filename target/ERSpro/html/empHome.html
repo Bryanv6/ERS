@@ -54,9 +54,9 @@
     <div class="col-6">
       <br><br><br>
       <h2>Employee Home</h2>
-      <p>Username</p>
-      <p>First Name</p>
-      <p>Last Name</p>
+      <p id="username">Username</p>
+      <p id="firstname">First Name</p>
+      <p id="lastname">Last Name</p>
     </div>
     <div class="col-6">
 
@@ -65,8 +65,8 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
+      <th scope="col" id="purpose">Purpose</th>
+      <th scope="col" id="name">Name</th>
     </tr>
   </thead>
   <tbody id ="requests">
@@ -92,7 +92,7 @@
   </tbody>
 </table>
 </div>
-        <button   method="get" action="../MasterServlet/login" type="button" class="btn btn-primary">Show Requests</button>
+        <button   method="get" action="../MasterServlet/home" type="button" class="btn btn-primary" onclick="getRequests()" >Show Requests</button>
 
 </div>
 </div>

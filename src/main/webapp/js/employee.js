@@ -37,20 +37,36 @@ addToTable(tBody, reqs);
 
 var req = new XMLHttpRequest();
 
-req.overrideMimeType("text/plain");
-req.open("GET", "http://localhost:8080/MasterServlet/login", true);
+req.overrideMimeType("application/json");
+req.open("GET", "http://localhost:8080/MasterServlet/home", true);
 req.onload = function() {
-    //var jsonResponse = JSON.parse(req.responseText);
+    var jsonResponse = JSON.parse(req.responseText);
     //var ulList = doc
     var tr = document.createElement("TR");
     var td1 = document.createElement("TD");
     td1.appendChild(document.createTextNode(req.responseText));
     tr.appendChild(td1);
     tBody.appendChild(tr);
-    console.log(req.responseText);
+    console.log(jsonResponse);
 }
 req.send();
 console.log("From js outside show");
+
+function getRequests(){
+var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            var tr = document.createElement("TR");
+            var td1 = document.createElement("TD");
+            td1.appendChild(document.createTextNode(req.responseText));
+            tr.appendChild(td1);
+            tBody.appendChild(tr);
+        }
+    };
+    xhttp.overrideMimeType("application/json");
+    xhttp.open("get", "/MasterServlet/home");
+    xhttp.send();
+}
 
 //req.open("GET", "http://localhost:8080/MasterServlet/home",true);
 //req.send();
