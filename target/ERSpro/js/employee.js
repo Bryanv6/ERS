@@ -38,10 +38,15 @@ addToTable(tBody, reqs);
 var req = new XMLHttpRequest();
 
 req.overrideMimeType("text/plain");
-req.open("GET", "http://localhost:8080/MasterServlet/", true);
+req.open("GET", "http://localhost:8080/MasterServlet/login", true);
 req.onload = function() {
     //var jsonResponse = JSON.parse(req.responseText);
     //var ulList = doc
+    var tr = document.createElement("TR");
+    var td1 = document.createElement("TD");
+    td1.appendChild(document.createTextNode(req.responseText));
+    tr.appendChild(td1);
+    tBody.appendChild(tr);
     console.log(req.responseText);
 }
 req.send();
@@ -49,7 +54,8 @@ console.log("From js outside show");
 
 //req.open("GET", "http://localhost:8080/MasterServlet/home",true);
 //req.send();
-/*$.get("http://localhost:8080/MasterServlet/home", function(responseJson) {
+/*
+$.get("http://localhost:8080/MasterServlet/login", function(responseJson) {
     //var json = responseJson.toString();
         //console.log("inside json");
         console.log(responseJson);

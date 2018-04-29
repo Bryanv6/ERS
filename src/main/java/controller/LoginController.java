@@ -38,11 +38,15 @@ public class LoginController {
     public void getPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         resp.getWriter().append("From login");
-        if(session.getAttribute("email")==null) {
+        resp.setContentType("text/plain");
+        String hello = "Hello World";
+        //res.setCharacterEncoding("UTF-8");
+        resp.getWriter().write(hello);
+        /*if(session.getAttribute("email")==null) {
             req.getRequestDispatcher("html/empLogin.html").forward(req,resp);
         } else {
             //req.getRequestDispatcher("html/empHome.html").forward(req,resp);
             resp.sendRedirect("/MasterServlet/home");
-        }
+        }*/
     }
 }

@@ -21,17 +21,6 @@ public class RequestHelper {
     public void process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, JAXBException {
         String switchString = req.getRequestURI().substring(req.getContextPath().length()+1);
 
-        while(switchString.indexOf("/") > 0){
-            switchString = switchString.substring(0, switchString.indexOf("/"));
-        }
-        /*PrintWriter pw = res.getWriter();
-        pw.println();
-        res.setContentType("text/html");
-        String s1 = req.getParameter("email");
-        String s2 = req.getParameter("password");
-        pw.println("<html><body><div> "
-                + "POST".equals(req.getMethod()) + " : " + req.getRequestURI() + ", are the values entered </div></body></html>");
-        pw.close();*/
         String name = req.getRequestURI();
         switch(name){
             case "/MasterServlet/home": hc.goHome(req, res); break;
