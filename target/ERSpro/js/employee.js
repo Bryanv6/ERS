@@ -26,7 +26,7 @@ function addToTable(n, data){
 
 var tBody = document.getElementById("requests");
 
- var tr = document.createElement("TR");
+ /*var tr = document.createElement("TR");
  var td1 = document.createElement("TD");
  var td2 = document.createElement("TD");
  var td3 = document.createElement("TD");
@@ -37,7 +37,7 @@ var tBody = document.getElementById("requests");
  tr.appendChild(td1);
  tr.appendChild(td2);
  tr.appendChild(td3);
- tBody.appendChild(tr);
+ tBody.appendChild(tr);*/
 
 
 var req = new XMLHttpRequest();
@@ -69,9 +69,6 @@ var xhttp = new XMLHttpRequest();
     xhttp.send();
 }
 
-function insertRequests(){
-
-}
 function submitRequests(){
 
     var reason = document.getElementById("input_purpose").value;
@@ -102,5 +99,32 @@ function approveRequests(){
     xhttp.open("POST", "/MasterServlet/approve");
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhttp.send("requestID="+id);
+
+}
+
+function showEmps(){
+
+
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            for(var i = 0; i < json.length; i++) {
+                var list = document.getElementById("empList");
+                var p = document.createElement("p");
+
+                p.appendChild(document.createTextNode(json[i].username + " " + json[i].firstName + " " + json[i].lastName));
+                list.appendChild(p);
+
+            }
+            console.log("got the info");
+            console.log(json);
+        }
+    };
+    xhttp.overrideMimeType("application/json");
+    xhttp.open("get", "/MasterServlet/getAllEmps");
+    //xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhttp.send();
 
 }

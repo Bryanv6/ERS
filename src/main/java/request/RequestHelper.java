@@ -38,6 +38,9 @@ public class RequestHelper {
             case "/MasterServlet/approve":
                 hc.approveReq(req,res);
                 break;
+            case "/MasterServlet/getAllEmps":
+                hc.getAllemp(req, res);
+                break;
             //case "/MasterServlet/getRequests":
 
         }

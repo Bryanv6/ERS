@@ -75,7 +75,7 @@
 </table>
 </div>
         <button  method="get" action="../MasterServlet/home" type="button" class="btn btn-primary" onclick="getRequests()" >Show Requests</button>
-        <button  method="post" action="../MasterServlet/home" type="button" class="btn btn-primary" onclick="insertRequests()"> New Request</button>
+
 
 </div>
       <div class="col-6">
@@ -93,7 +93,7 @@
           <input id="input_amount" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="amount">
         </div>
 
-      <button  type="submit" class="btn btn-primary" onclick="submitRequests()" >Submit</button>
+      <button  type="submit" class="btn btn-primary" onclick="submitRequests()" >New Request</button>
         </form>
         <div class="row">
         <form method="post" action="../MasterServlet/approve">
@@ -108,6 +108,12 @@
           <button  type="submit" class="btn btn-primary" onclick="approveRequests()" >Submit</button>
         </form>
       </div>
+
+        <div id="empList">
+          <p></p>
+          <h3>All Employees</h3>
+          <button  type="button" class="btn btn-primary" onclick="showEmps()" >Show Employees</button>
+        </div>
       </div>
 </div>
 
