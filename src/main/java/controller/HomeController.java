@@ -36,7 +36,12 @@ public class HomeController {
                 res.sendRedirect("/MasterServlet/login");
 
             } else {
-                List<Requests> requests = ERSService.getAllRequests(emp.getEmpID());
+                List<Requests> requests;
+                if(emp.isManager()){
+                    requests = ERSService.getAllEmpRequests();
+                }
+                else
+                    requests = ERSService.getAllRequests(emp.getEmpID());
                 //String json = "";
 
                 String json = new Gson().toJson(requests);
@@ -59,5 +64,8 @@ public class HomeController {
         ERSService.insertRequest(emp.getEmpID(), Double.parseDouble(amount), purpose);
 
 
+    }
+    public void approveReq(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+        req.getParameter("approveID");
     }
 }

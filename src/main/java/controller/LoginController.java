@@ -24,18 +24,19 @@ public class LoginController {
        emp = ERSService.getEmp(username, password);
 
        if(emp == null) {
-           //res.getWriter().append("From login");
-           //req.getRequestDispatcher("html/empHome.html").forward(req,res);
+
            res.sendRedirect("/MasterServlet/login");
        }
        else{
            HttpSession session = req.getSession();
            session.setAttribute("email", emp);
-           session.setAttribute("manager", emp.isManager());
-           //req.getRequestDispatcher("html/empHome.html").forward(req,res);
-           //res.sendRedirect("/MasterServlet/home");
+           boolean manager = emp.isManager();
+           session.setAttribute("manager", new Boolean(manager));
+
            String json = new Gson().toJson(emp);
+           res.getWriter().append("from login");
            res.setContentType("application/json");
+
            res.getWriter().append(json);
        }
    }
@@ -43,6 +44,7 @@ public class LoginController {
     public void getPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         String json = new Gson().toJson(emp);
+
         resp.setContentType("application/json");
         resp.getWriter().append(json);
         /*if(session.getAttribute("email")==null) {

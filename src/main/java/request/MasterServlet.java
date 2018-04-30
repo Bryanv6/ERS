@@ -1,5 +1,7 @@
 package request;
 
+import model.Employee;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -40,18 +42,26 @@ public class MasterServlet extends HttpServlet{
                 .startsWith("/html/")) {
             super.doGet(request, response);
         }
+        rh.process(request, response);
+
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
-        rh.process(request, response);
 
+        //response.getWriter().append(String.valueOf(request.getAttribute("manager").equals(true)));
+        String man = String.valueOf(request.getAttribute("manager"));
+        Employee emp = (Employee)request.getAttribute("email");
         try {
-            if(request.getAttribute("manager") == true){
-                response.sendRedirect("/html/managerHome.html");
-            }
-            else
+
+            //if(man.equalsIgnoreCase("true")){
+
+                //response.sendRedirect("/html/managerHome.html");
+            //}
+            //if(man.equalsIgnoreCase("false")) {
                 response.sendRedirect("/html/empHome.html");
+            //}
+
         }catch(NullPointerException e){}
     }
 

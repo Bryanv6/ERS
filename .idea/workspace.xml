@@ -2,23 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f14d4fc-5d8b-4809-9ad2-8dc78aa9b425" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/request/MasterServlet.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/dao/ERSDaoImp.class" afterPath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/dao/ERSDaoImp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/request/MasterServlet.class" afterPath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/request/MasterServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/request/RequestHelper.class" afterPath="$PROJECT_DIR$/target/ERSpro/WEB-INF/classes/request/RequestHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/request/MasterServlet.class" afterPath="$PROJECT_DIR$/target/classes/request/MasterServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ERSDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/dao/ERSDaoImp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/request/RequestHelper.class" afterPath="$PROJECT_DIR$/target/classes/request/RequestHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/MasterServlet.java" afterPath="$PROJECT_DIR$/src/main/java/request/MasterServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/RequestHelper.java" afterPath="$PROJECT_DIR$/src/main/java/request/RequestHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/empHome.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/empHome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/empLogin.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/empLogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/managerHome.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/managerHome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/employee.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/employee.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/html/empHome.html" afterPath="$PROJECT_DIR$/target/ERSpro/html/empHome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/html/empLogin.html" afterPath="$PROJECT_DIR$/target/ERSpro/html/empLogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/manager.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ERSpro/js/employee.js" afterPath="$PROJECT_DIR$/target/ERSpro/js/employee.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,21 +33,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RequestHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/request/RequestHelper.java">
+      <file leaf-file-name="empHome.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="20" column="109" lean-forward="false" selection-start-line="20" selection-start-column="109" selection-end-line="20" selection-end-column="109" />
+            <state relative-caret-position="94">
+              <caret line="102" column="81" lean-forward="false" selection-start-line="102" selection-start-column="81" selection-end-line="102" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="empHome.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empHome.html">
+      <file leaf-file-name="RequestHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/request/RequestHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="175">
+              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -55,8 +56,40 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+            <state relative-caret-position="71">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employee.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/employee.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="managerHome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/managerHome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="99" column="58" lean-forward="true" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -65,9 +98,26 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="24" column="108" lean-forward="false" selection-start-line="24" selection-start-column="108" selection-end-line="24" selection-end-column="108" />
+            <state relative-caret-position="93">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ERSDaoImp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="144" column="43" lean-forward="false" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="43" />
+              <folding>
+                <element signature="method#insertEmp#0;class#ERSDaoImp#0" expanded="false" />
+                <marker date="1525071423308" expanded="true" signature="1249:1304" ph="SELECT * FRO... employee" />
+                <marker date="1525071423308" expanded="true" signature="1369:1416" ph="SELECT * FRO... manager" />
+                <marker date="1525071423308" expanded="true" signature="2564:2586" ph="SELECT * FRO... employee" />
+                <marker date="1525071423308" expanded="true" signature="4246:4289" ph="SELECT * FRO... request" />
+                <marker date="1525071423308" expanded="true" signature="5869:5890" ph="SELECT * FRO... request" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,56 +125,9 @@
       <file leaf-file-name="MasterServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/request/MasterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="166">
+              <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1072">
-              <caret line="133" column="67" lean-forward="false" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="67" />
-              <folding>
-                <element signature="method#menu#0;class#Main#0" expanded="false" />
-                <element signature="method#viewRequestPending#0;class#Main#0" expanded="false" />
-                <element signature="method#viewRequestApproved#0;class#Main#0" expanded="false" />
-                <element signature="method#updateRequest#0;class#Main#0" expanded="false" />
-                <element signature="method#viewAllEmp#0;class#Main#0" expanded="false" />
-                <element signature="method#viewAllReimburstPending#0;class#Main#0" expanded="false" />
-                <element signature="method#viewAllReimburstApproved#0;class#Main#0" expanded="false" />
-                <element signature="method#updateEmpInfo#0;class#Main#0" expanded="false" />
-                <element signature="method#registerEmp#0;class#Main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ERSDaoImp.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-              <folding>
-                <element signature="method#insertEmp#0;class#ERSDaoImp#0" expanded="false" />
-                <marker date="1525071221448" expanded="true" signature="1249:1304" ph="SELECT * FRO... employee" />
-                <marker date="1525071221448" expanded="true" signature="1369:1416" ph="SELECT * FRO... manager" />
-                <marker date="1525071221448" expanded="true" signature="2565:2587" ph="SELECT * FRO... employee" />
-                <marker date="1525071221448" expanded="true" signature="4247:4290" ph="SELECT * FRO... request" />
-                <marker date="1525071221448" expanded="true" signature="5870:5891" ph="SELECT * FRO... request" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -132,18 +135,8 @@
       <file leaf-file-name="empLogin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empLogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-335">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="26">
+              <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -162,14 +155,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/js/employee.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/empLogin.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/empHome.html" />
         <option value="$PROJECT_DIR$/src/main/java/request/RequestHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/employee.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/manager.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/html/managerHome.html" />
         <option value="$PROJECT_DIR$/src/main/java/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/request/MasterServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/html/empHome.html" />
       </list>
     </option>
   </component>
@@ -187,8 +182,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="75" />
+    <option name="x" value="142" />
+    <option name="y" value="247" />
     <option name="width" value="1268" />
     <option name="height" value="725" />
   </component>
@@ -240,6 +235,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ERSpro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ERS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -941,12 +962,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524876709536</updated>
       <workItem from="1524876714836" duration="1347000" />
-      <workItem from="1525028277683" duration="23990000" />
+      <workItem from="1525028277683" duration="31244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25337000" />
+    <option name="totallyTimeSpent" value="32591000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -958,7 +979,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="75" width="1268" height="725" extended-state="0" />
+    <frame x="142" y="247" width="1268" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1100,22 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/employee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/CheckUsernameController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1132,74 +1137,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/managerHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/html/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-335">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="24" column="108" lean-forward="false" selection-start-line="24" selection-start-column="108" selection-end-line="24" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empHome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/request/RequestHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="20" column="109" lean-forward="false" selection-start-line="20" selection-start-column="109" selection-end-line="20" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/request/MasterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1222,18 +1163,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Requests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/employee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/managerHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="99" column="58" lean-forward="true" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/request/RequestHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/request/MasterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/ERSDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+        <state relative-caret-position="42">
+          <caret line="144" column="43" lean-forward="false" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="43" />
           <folding>
             <element signature="method#insertEmp#0;class#ERSDaoImp#0" expanded="false" />
-            <marker date="1525071221448" expanded="true" signature="1249:1304" ph="SELECT * FRO... employee" />
-            <marker date="1525071221448" expanded="true" signature="1369:1416" ph="SELECT * FRO... manager" />
-            <marker date="1525071221448" expanded="true" signature="2565:2587" ph="SELECT * FRO... employee" />
-            <marker date="1525071221448" expanded="true" signature="4247:4290" ph="SELECT * FRO... request" />
-            <marker date="1525071221448" expanded="true" signature="5870:5891" ph="SELECT * FRO... request" />
+            <marker date="1525071423308" expanded="true" signature="1249:1304" ph="SELECT * FRO... employee" />
+            <marker date="1525071423308" expanded="true" signature="1369:1416" ph="SELECT * FRO... manager" />
+            <marker date="1525071423308" expanded="true" signature="2564:2586" ph="SELECT * FRO... employee" />
+            <marker date="1525071423308" expanded="true" signature="4246:4289" ph="SELECT * FRO... request" />
+            <marker date="1525071423308" expanded="true" signature="5869:5890" ph="SELECT * FRO... request" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/empHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="102" column="81" lean-forward="false" selection-start-line="102" selection-start-column="81" selection-end-line="102" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
