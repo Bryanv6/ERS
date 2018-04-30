@@ -30,7 +30,7 @@ public class LoginController {
            HttpSession session = req.getSession();
            session.setAttribute("email", emp);
            //req.getRequestDispatcher("html/empHome.html").forward(req,res);
-           res.sendRedirect("/MasterServlet/home");
+           //res.sendRedirect("/MasterServlet/home");
            res.getWriter().append("From login");
        }
    }

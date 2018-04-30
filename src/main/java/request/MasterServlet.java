@@ -60,6 +60,9 @@ public class MasterServlet extends HttpServlet{
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
+        try {
+            response.sendRedirect("/html/empHome.html");
+        }catch(NullPointerException e){}
     }
 
 }

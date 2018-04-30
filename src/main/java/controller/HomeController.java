@@ -46,9 +46,10 @@ public class HomeController {
                 res.setContentType("application/json");
                 String hello = "Hello World";
                 //res.setCharacterEncoding("UTF-8");
-                res.sendRedirect("/html/empHome.html");
-                res.getWriter().append(json);
+                //res.sendRedirect("/html/empHome.html");
                 //req.getRequestDispatcher("/html/empHome.html").forward(req,res);
+                res.getWriter().append(json);
+
 
             }
 

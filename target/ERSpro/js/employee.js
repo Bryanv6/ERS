@@ -34,7 +34,7 @@ var tBody = document.getElementById("requests");
  tBody.appendChild(tr);
 
 addToTable(tBody, reqs);
-
+/*
 var req = new XMLHttpRequest();
 
 req.overrideMimeType("application/json");
@@ -50,6 +50,7 @@ req.onload = function() {
     console.log(jsonResponse);
 }
 req.send();
+*/
 console.log("From js outside show");
 
 function getRequests(){
@@ -58,7 +59,7 @@ var xhttp = new XMLHttpRequest();
         if(this.readyState == 4 && this.status == 200){
             var tr = document.createElement("TR");
             var td1 = document.createElement("TD");
-            td1.appendChild(document.createTextNode(req.responseText));
+            td1.appendChild(document.createTextNode(this.responseText));
             tr.appendChild(td1);
             tBody.appendChild(tr);
         }
@@ -67,14 +68,3 @@ var xhttp = new XMLHttpRequest();
     xhttp.open("get", "/MasterServlet/home");
     xhttp.send();
 }
-
-//req.open("GET", "http://localhost:8080/MasterServlet/home",true);
-//req.send();
-/*
-$.get("http://localhost:8080/MasterServlet/login", function(responseJson) {
-    //var json = responseJson.toString();
-        //console.log("inside json");
-        console.log(responseJson);
-             // Locate HTML DOM element with ID "somediv" and set its text content with the response text.
-});
-*/
