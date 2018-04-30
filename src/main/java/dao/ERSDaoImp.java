@@ -1,7 +1,9 @@
 package dao;
 
+import controller.HomeController;
 import model.Employee;
 import model.Requests;
+import org.apache.log4j.Logger;
 import util.ConnectionUtil;
 
 import java.sql.*;
@@ -13,6 +15,7 @@ import java.util.List;
  */
 public class ERSDaoImp implements ERSDao{
     private static ConnectionUtil cu = ConnectionUtil.getInstance();
+    final static Logger Log = Logger.getLogger(ERSDaoImp.class);
     public boolean insertEmp(Employee emp){
         int index = 0;
         try(Connection conn = cu.getConnection()){
@@ -65,7 +68,7 @@ public class ERSDaoImp implements ERSDao{
         try (Connection conn = cu.getConnection()) {
             List<Employee> emps = new ArrayList<>();
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM employee");
-
+            Log.info("Getting all emps");
             ResultSet rs = stmt.executeQuery();
             //nt empID, String username, String password, String firstName, String lastName, boolean isManager
 
@@ -106,6 +109,7 @@ public class ERSDaoImp implements ERSDao{
         try (Connection conn = cu.getConnection()) {
             List<Requests> requests = new ArrayList<>();
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM request WHERE requested_by= ?");
+            Log.info("Getting all requests");
 
             stmt.setInt(++index, id);
             ResultSet rs = stmt.executeQuery();

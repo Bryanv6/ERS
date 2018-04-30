@@ -96,16 +96,16 @@
       <button  type="submit" class="btn btn-primary" onclick="submitRequests()" >Submit</button>
         </form>
         <div class="row">
-        <form method="post" action="../MasterServlet/home">
+        <form method="post" action="../MasterServlet/approve">
 
           <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">Request ID</span>
             </div>
-            <input id="input_amount" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="amount">
+            <input id="input_requestID" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="requestID">
           </div>
 
-          <button  type="submit" class="btn btn-primary" onclick="submitRequests()" >Submit</button>
+          <button  type="submit" class="btn btn-primary" onclick="approveRequests()" >Submit</button>
         </form>
       </div>
       </div>

@@ -34,6 +34,10 @@ public class RequestHelper {
             else
                 lc.getPage(req,res);
             break;
+
+            case "/MasterServlet/approve":
+                hc.approveReq(req,res);
+                break;
             //case "/MasterServlet/getRequests":
 
         }

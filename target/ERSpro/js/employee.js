@@ -89,3 +89,18 @@ function submitRequests(){
     xhttp.send("purpose="+reason+"&amount="+amount);
 
 }
+
+function approveRequests(){
+    var id = document.getElementById("input_requestID").value;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log("sent the info" );
+        }
+    };
+    xhttp.open("POST", "/MasterServlet/approve");
+    xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhttp.send("requestID="+id);
+
+}
