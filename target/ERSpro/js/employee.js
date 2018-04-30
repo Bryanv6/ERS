@@ -34,23 +34,20 @@ var tBody = document.getElementById("requests");
  tBody.appendChild(tr);
 
 addToTable(tBody, reqs);
-/*
+
 var req = new XMLHttpRequest();
 
 req.overrideMimeType("application/json");
-req.open("GET", "http://localhost:8080/MasterServlet/home", true);
+req.open("GET", "/MasterServlet/login", true);
 req.onload = function() {
-    var jsonResponse = JSON.parse(req.responseText);
-    //var ulList = doc
-    var tr = document.createElement("TR");
-    var td1 = document.createElement("TD");
-    td1.appendChild(document.createTextNode(req.responseText));
-    tr.appendChild(td1);
-    tBody.appendChild(tr);
-    console.log(jsonResponse);
+    var json = JSON.parse(this.responseText);
+    document.getElementById("username").innerHTML = "Username: " + json.username;
+    document.getElementById("firstname").innerHTML = "Firstname: " + json.firstName;
+    document.getElementById("lastname").innerHTML = "Lastname: " + json.lastName;
+    console.log("From on load" + this.responseText);
 }
 req.send();
-*/
+
 console.log("From js outside show");
 
 function getRequests(){

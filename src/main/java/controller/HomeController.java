@@ -44,7 +44,7 @@ public class HomeController {
             } else {
                 String json = new Gson().toJson(emp);
                 res.setContentType("application/json");
-                String hello = "Hello World";
+
                 //res.setCharacterEncoding("UTF-8");
                 //res.sendRedirect("/html/empHome.html");
                 //req.getRequestDispatcher("/html/empHome.html").forward(req,res);

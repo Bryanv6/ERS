@@ -1,5 +1,6 @@
 package controller;
 
+import com.google.gson.Gson;
 import model.Employee;
 import service.ERSService;
 
@@ -15,11 +16,12 @@ import java.io.IOException;
  */
 public class LoginController {
     //public ERSService ers = new ERSService();
+    Employee emp;
    public void login(HttpServletRequest req, HttpServletResponse res) throws ServletException,IOException {
        String username = req.getParameter("email");
        String password = req.getParameter("password");
 
-       Employee emp = ERSService.getEmp(username, password);
+       emp = ERSService.getEmp(username, password);
 
        if(emp == null) {
            //res.getWriter().append("From login");
@@ -31,17 +33,17 @@ public class LoginController {
            session.setAttribute("email", emp);
            //req.getRequestDispatcher("html/empHome.html").forward(req,res);
            //res.sendRedirect("/MasterServlet/home");
-           res.getWriter().append("From login");
+           String json = new Gson().toJson(emp);
+           res.setContentType("application/json");
+           res.getWriter().append(json);
        }
    }
 
     public void getPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        resp.getWriter().append("From login");
-        resp.setContentType("text/plain");
-        String hello = "Hello World";
-        //res.setCharacterEncoding("UTF-8");
-        resp.getWriter().write(hello);
+        String json = new Gson().toJson(emp);
+        resp.setContentType("application/json");
+        resp.getWriter().append(json);
         /*if(session.getAttribute("email")==null) {
             req.getRequestDispatcher("html/empLogin.html").forward(req,resp);
         } else {
