@@ -5,16 +5,51 @@
 var reqs = [{"id":"1", "purpose":"i want money", "amount":"500"},
     {"id":"2", "purpose":"pay me back", "amount":"100"}];
 function addToTable(n, data){
+    var new_tbody = document.createElement('tbody');
 
-    data.forEach((d,i) => {
+    for(var i = 0; i < data.length; i++){
         var tr = document.createElement("TR");
-    Object.keys(d).forEach((k,j) => {
         var td1 = document.createElement("TD");
-    td1.appendChild(document.createTextNode(d[k]));
+        var td2 = document.createElement("TD");
+         var td3 = document.createElement("TD");
+         var td4 = document.createElement("TD");
+
+         td1.appendChild(document.createTextNode(data[i].requestID));
+         td2.appendChild(document.createTextNode(data[i].purpose));
+         td3.appendChild(document.createTextNode(data[i].amount));
+         td4.appendChild(document.createTextNode(data[i].isApproved));
+         tr.appendChild(td1);
+         tr.appendChild(td2);
+         tr.appendChild(td3);
+         tr.appendChild(td4);
+        new_tbody.appendChild(tr);
+    }
+
+    //data.forEach((d,i) => {
+      //  var tr = document.createElement("TR");
+    /*var td1 = document.createElement("TD");
+    var td2 = document.createElement("TD");
+    var td3 = document.createElement("TD");
+    var td4 = document.createElement("TD");
+
+    td1.appendChild(document.createTextNode(d.requestID));
+    td2.appendChild(document.createTextNode(d.purpose));
+    td3.appendChild(document.createTextNode(d.amount));
+    td4.appendChild(document.createTextNode(d.isApproved));
     tr.appendChild(td1);
-});
-    n.appendChild(tr);
-});
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);*/
+    //Object.keys(d).forEach((k,j) => {
+      //  var td1 = document.createElement("TD");
+   // td1.appendChild(document.createTextNode(d[k]));
+//});
+
+   // tr.appendChild(td1);
+    //new_tbody.appendChild(tr);
+//});
+
+    n.parentNode.replaceChild(new_tbody, n);
 
 }
 
@@ -33,7 +68,7 @@ var tBody = document.getElementById("requests");
  tr.appendChild(td3);
  tBody.appendChild(tr);
 
-addToTable(tBody, reqs);
+//addToTable(tBody, reqs);
 
 var req = new XMLHttpRequest();
 
@@ -54,14 +89,33 @@ function getRequests(){
 var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            var tr = document.createElement("TR");
-            var td1 = document.createElement("TD");
-            td1.appendChild(document.createTextNode(this.responseText));
-            tr.appendChild(td1);
-            tBody.appendChild(tr);
+            var json = JSON.parse(this.responseText);
+            console.log(json);
+            addToTable(tBody, json);
         }
     };
     xhttp.overrideMimeType("application/json");
     xhttp.open("get", "/MasterServlet/home");
     xhttp.send();
+}
+
+function insertRequests(){
+
+}
+function submitRequests(){
+
+    var reason = document.getElementById("input_purpose").value;
+    var amount = document.getElementById("input_amount").value;
+
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log("sent the info" )
+        }
+    };
+    xhttp.open("POST", "/MasterServlet/home");
+    xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhttp.send("purpose="+reason+"&amount="+amount);
+
 }

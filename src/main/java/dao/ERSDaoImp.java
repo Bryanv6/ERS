@@ -35,14 +35,20 @@ public class ERSDaoImp implements ERSDao{
         int index = 0;
         try(Connection conn = cu.getConnection()){
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM employee WHERE email = ? AND password = ?");
-
+            PreparedStatement stmt2 = conn.prepareStatement("SELECT * FROM manager WHERE man_employee_id = ?");
             stmt.setString(++index, user);
             stmt.setString(++index, password);
 
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
-                return new Employee(rs.getInt("employee_id"), rs.getString("email"), rs.getString("password"),
+                Employee emp = new Employee(rs.getInt("employee_id"), rs.getString("email"), rs.getString("password"),
                         rs.getString("firstname"), rs.getString("lastname"));
+                stmt2.setInt(1,emp.getEmpID());
+                ResultSet rs2 = stmt2.executeQuery();
+                if(rs2.next()){
+                    emp.setManager(true);
+                }
+                return emp;
             }
         } catch(SQLException sqle){
             System.err.println(sqle.getMessage());

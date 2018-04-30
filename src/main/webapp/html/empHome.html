@@ -32,10 +32,10 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Employee Login</a>
+              <a class="nav-link" href="http://localhost:8080/html/empLogin.html">Employee Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Manager Login</a>
+              <a class="nav-link" href="http://localhost:8080/html/managerlogin.html">Manager Login</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -49,7 +49,7 @@
     <!-- Begin page content -->
 
 
-    <div class="container">
+    <form class="container">
       <div class="row">
     <div class="col-6">
       <br><br><br>
@@ -64,18 +64,38 @@
     <table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">#id</th>
       <th scope="col" id="purpose">Purpose</th>
-      <th scope="col" id="name">Name</th>
+      <th scope="col" id="amount">Amount</th>
+      <th scope="col" id="Approved">Approved</th>
     </tr>
   </thead>
   <tbody id ="requests">
   </tbody>
 </table>
 </div>
-        <button   method="get" action="../MasterServlet/home" type="button" class="btn btn-primary" onclick="getRequests()" >Show Requests</button>
+        <button  method="get" action="../MasterServlet/home" type="button" class="btn btn-primary" onclick="getRequests()" >Show Requests</button>
+        <button  method="post" action="../MasterServlet/home" type="button" class="btn btn-primary" onclick="insertRequests()"> New Request</button>
 
 </div>
+      <div class="col-6">
+        <form method="post" action="../MasterServlet/home">
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Purpose</span>
+        </div>
+        <input id="input_purpose" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="purpose">
+      </div>
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Amount</span>
+          </div>
+          <input id="input_amount" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="amount">
+        </div>
+
+      <button  type="submit" class="btn btn-primary" onclick="submitRequests()" >Submit</button>
+        </form>
+      </div>
 </div>
 
     <!-- Bootstrap core JavaScript

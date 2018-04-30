@@ -2,7 +2,9 @@ package controller;
 
 import com.google.gson.Gson;
 import model.Employee;
+import model.Requests;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
+import service.ERSService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,26 +15,18 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 /**
  * Created by bryanvillegas on 4/25/18.
  */
 public class HomeController {
-
-    public void goHome(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, JAXBException{
+    Employee emp;
+    public void goHome(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
         HttpSession session = req.getSession();
         //PrintWriter printWriter = res.getWriter();
 
-        Employee emp = (Employee)session.getAttribute("email");
-        /*try {
-            JAXBContext jc = JAXBContext.newInstance(Employee.class);
-            Marshaller marshaller = jc.createMarshaller();
-            marshaller.setProperty(MarshallerProperties.MEDIA_TYPE, "application/json");
-            marshaller.setProperty(MarshallerProperties.JSON_INCLUDE_ROOT, true);
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-            marshaller.marshal(emp, res.getWriter());
-        }catch(JAXBException e){}*/
+        emp = (Employee)session.getAttribute("email");
 
         if(emp == null)
             res.sendRedirect("/MasterServlet/login");
@@ -42,9 +36,11 @@ public class HomeController {
                 res.sendRedirect("/MasterServlet/login");
 
             } else {
-                String json = new Gson().toJson(emp);
-                res.setContentType("application/json");
+                List<Requests> requests = ERSService.getAllRequests(emp.getEmpID());
+                //String json = "";
 
+                String json = new Gson().toJson(requests);
+                res.setContentType("application/json");
                 //res.setCharacterEncoding("UTF-8");
                 //res.sendRedirect("/html/empHome.html");
                 //req.getRequestDispatcher("/html/empHome.html").forward(req,res);
@@ -54,5 +50,14 @@ public class HomeController {
             }
 
         }
+    }
+
+    public void insertRequest(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+        String purpose = req.getParameter("purpose");
+        String amount = req.getParameter("amount");
+
+        ERSService.insertRequest(emp.getEmpID(), Double.parseDouble(amount), purpose);
+
+
     }
 }

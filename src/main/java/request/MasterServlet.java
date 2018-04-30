@@ -39,29 +39,19 @@ public class MasterServlet extends HttpServlet{
         if(request.getRequestURI().substring(request.getContextPath().length())
                 .startsWith("/html/")) {
             super.doGet(request, response);
-        } else {
-            try {
-                rh.process(request, response);
-            }catch(JAXBException e){}
-            //response.getWriter().append("Login success");
         }
-        /*
-        response.getWriter().append("Hello world");
-
-        PrintWriter pw = response.getWriter();
-        pw.println();
-        response.setContentType("text/html");
-        String s1 = request.getParameter("email");
-        String s2 = request.getParameter("password");
-        pw.println("<html><body><div> "
-                + s1 + " : " + s2 + ", are the values entered </div></body></html>");
-        pw.close();*/
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
+        rh.process(request, response);
+
         try {
-            response.sendRedirect("/html/empHome.html");
+            if(request.getAttribute("manager") == true){
+                response.sendRedirect("/html/managerHome.html");
+            }
+            else
+                response.sendRedirect("/html/empHome.html");
         }catch(NullPointerException e){}
     }
 

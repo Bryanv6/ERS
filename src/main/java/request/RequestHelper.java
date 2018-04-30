@@ -18,12 +18,16 @@ public class RequestHelper {
     private LoginController lc = new LoginController();
     private HomeController hc = new HomeController();
 
-    public void process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, JAXBException {
+    public void process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String switchString = req.getRequestURI().substring(req.getContextPath().length()+1);
 
         String name = req.getRequestURI();
         switch(name){
-            case "/MasterServlet/home": hc.goHome(req, res); break;
+            case "/MasterServlet/home": if("POST".equals(req.getMethod())){
+                hc.insertRequest(req, res);
+            }else
+                hc.goHome(req, res);
+            break;
             case "/MasterServlet/login":if("POST".equals(req.getMethod())) {
                 lc.login(req,res);
             }

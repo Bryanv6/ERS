@@ -31,6 +31,7 @@ public class LoginController {
        else{
            HttpSession session = req.getSession();
            session.setAttribute("email", emp);
+           session.setAttribute("manager", emp.isManager());
            //req.getRequestDispatcher("html/empHome.html").forward(req,res);
            //res.sendRedirect("/MasterServlet/home");
            String json = new Gson().toJson(emp);
